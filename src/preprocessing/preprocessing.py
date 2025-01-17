@@ -1,9 +1,6 @@
-from src.preprocessing.load_dataset import load_dataset
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
-
-data=load_dataset()    
 
 def labeling(data):
     if data <=2:
@@ -23,5 +20,3 @@ def preprocessing(data):
     data.duplicated().sum()
     # 0 duplicates
     return data
-
-
