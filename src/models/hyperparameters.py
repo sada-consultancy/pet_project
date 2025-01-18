@@ -71,5 +71,4 @@ def all_models():
     cat = ['cat',cat_pipeline,cat_param_grid]
     
     models = [lr,xg,lgbm,rf,cat] #Activate to run all the models
-    #models = [lr]
     return models
