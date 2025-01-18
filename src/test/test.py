@@ -31,8 +31,8 @@ def test():
     model_nn = load_model('./models/nn.h5')
     acc,f1,precision,recall=eval_nn(model_nn,features_test,target_test)
     results_nn.append(['nn',acc,f1,precision,recall])
-    results_df=pd.DataFrame(results_nn,columns=['model','accuracy_score','f1_score','precision','recall'])
-    results_data=pd.concat([results_df,results_data])
+    results_df_nn=pd.DataFrame(results_nn,columns=['model','accuracy_score','f1_score','precision','recall'])
+    results_data=pd.concat([results_df,results_df_nn])
     results_data.to_csv('./files/output/results_test.csv',index=False)
     
     return results_data
